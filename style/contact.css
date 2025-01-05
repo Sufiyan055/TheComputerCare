@@ -1,0 +1,185 @@
+.bgContact {
+  background: linear-gradient(45deg, rgba(0, 0, 13, 0.1215686275), rgba(0, 0, 13, 0.1411764706)), url(../images/customerSupport.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgContact h1 {
+  color: #fff;
+  font-size: 2.5em;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 681px) {
+  .bgContact h1 {
+    font-size: 1.7em;
+  }
+}
+/* Icons Contacts */
+.iconsContacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0px;
+  padding: 15px;
+}
+.iconsContacts .iconBoxMain {
+  width: 70%;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+.iconsContacts .iconBoxMain .iconBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.iconsContacts .iconBoxMain .iconBox i {
+  background-color: #309724;
+  color: #fff;
+  font-size: 1.8em;
+  padding: 16px 19px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.iconsContacts .iconBoxMain .iconBox .indicate {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-section .visit-office,
+.contact-section .leave-message {
+  width: 45%;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #309724;
+  border-bottom: 3px solid #309724;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.contact-section p {
+  margin-bottom: 20px;
+  color: #333;
+}
+.contact-section .map-container {
+  width: 100%;
+  height: 250px;
+}
+.contact-section .map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #309724;
+}
+.contact-section form input,
+.contact-section form textarea,
+.contact-section form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #309724;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contact-section form #phone[type=number]::-webkit-inner-spin-button,
+.contact-section form #phone[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact-section form select {
+  cursor: pointer;
+}
+.contact-section form textarea {
+  resize: none;
+  height: 120px;
+}
+.contact-section form .emailWhatsappBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.contact-section form .emailWhatsappBtn button,
+.contact-section form .emailWhatsappBtn .whatsapBtn {
+  padding: 12px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 50%;
+}
+.contact-section form .emailWhatsappBtn button {
+  background-color: #309724;
+}
+.contact-section form .emailWhatsappBtn button:hover {
+  background-color: #6ce05f;
+}
+.contact-section form .emailWhatsappBtn .whatsapBtn {
+  background-color: #25d366;
+}
+.contact-section form .emailWhatsappBtn .whatsapBtn:hover {
+  background-color: #009a38;
+}
+.contact-section form .alertbelowBtn {
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-section .visit-office,
+  .contact-section .leave-message {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .contact-section .visit-office form .emailWhatsappBtn,
+  .contact-section .leave-message form .emailWhatsappBtn {
+    flex-direction: column;
+  }
+  .contact-section .visit-office form .emailWhatsappBtn button,
+  .contact-section .visit-office form .emailWhatsappBtn .whatsapBtn,
+  .contact-section .leave-message form .emailWhatsappBtn button,
+  .contact-section .leave-message form .emailWhatsappBtn .whatsapBtn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 517px) {
+  .contact-section .leave-message .emailWhatsappBtn button,
+  .contact-section .leave-message .emailWhatsappBtn .whatsapBtn {
+    font-size: 0.9em;
+  }
+}/*# sourceMappingURL=contact.css.map */

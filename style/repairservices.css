@@ -1,0 +1,73 @@
+.bgRepairServices {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3843137255), rgba(0, 0, 0, 0.3294117647)), url(../images/image2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: 75%;
+}
+.bgRepairServices h1 {
+  color: #fff;
+  font-size: 2.5em;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 681px) {
+  .bgRepairServices h1 {
+    font-size: 1.7em;
+  }
+}
+/* Search Bar For Services */
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+/* Services */
+.servicesSection {
+  margin: 50px 0px;
+  background-color: #fff;
+}
+
+.messageUsForDiffService {
+  text-align: center;
+  padding: 5px 2px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.messageUsForDiffService a {
+  background-color: #309724;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3294117647);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.messageUsForDiffService a:hover {
+  background-color: #6ce05f;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3294117647);
+  transform: scale(1.1);
+}
+
+.servicepamphlet {
+  margin: 25px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: normal;
+  justify-content: space-evenly;
+}
+.servicepamphlet img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}/*# sourceMappingURL=repairservices.css.map */

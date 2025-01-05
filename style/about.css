@@ -1,0 +1,85 @@
+.bgAbout {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3215686275), rgba(0, 0, 0, 0.3019607843)), url(../images/aboutBgWL.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position-y: 15%;
+}
+.bgAbout h1 {
+  color: #fff;
+  font-size: 2.5em;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 681px) {
+  .bgAbout h1 {
+    font-size: 1.7em;
+  }
+}
+/* About Us Repair are Our Passion */
+.imgContentSectionAbout {
+  background-color: rgba(0, 0, 0, 0.0431372549);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 35px;
+}
+.imgContentSectionAbout .imgpart {
+  width: 50%;
+  overflow: hidden;
+}
+.imgContentSectionAbout .imgpart img {
+  width: 100%;
+  transition: transform 0.9s ease-in-out;
+}
+.imgContentSectionAbout .imgpart img:hover {
+  transform: scale(1.5);
+}
+.imgContentSectionAbout .someContentAbout {
+  width: 60%;
+  padding: 0 20px; /* Adjust padding to maintain spacing */
+  margin: 0 auto; /* Center the content */
+}
+.imgContentSectionAbout .someContentAbout strong {
+  font-size: 1.8em;
+}
+.imgContentSectionAbout .someContentAbout p {
+  color: rgb(48, 48, 48);
+  font-size: 1.2em;
+  text-align: justify;
+  line-height: 1.6;
+}
+.imgContentSectionAbout .someContentAbout .pointsPart {
+  margin: 15px 0px;
+  justify-content: space-between;
+}
+.imgContentSectionAbout .someContentAbout .pointsPart .points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: normal;
+}
+.imgContentSectionAbout .someContentAbout .pointsPart .points i {
+  color: #309724;
+}
+
+@media screen and (max-width: 937px) {
+  .imgContentSectionAbout {
+    flex-direction: column;
+  }
+  .imgContentSectionAbout .imgpart {
+    width: 100%;
+  }
+  .imgContentSectionAbout .someContentAbout {
+    width: 100%;
+    padding: 0 1px;
+  }
+}/*# sourceMappingURL=about.css.map */

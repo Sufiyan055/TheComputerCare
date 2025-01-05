@@ -1,0 +1,95 @@
+$primaryColor: #309724;
+
+$hoverPrimaryColor: #6ce05f;
+
+@mixin flexcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgAbout {
+  background: linear-gradient(45deg, #00000052, #0000004d),
+    url(../images/aboutBgWL.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  @include flexcontent();
+  background-position-y: 15%;
+  h1 {
+    color: #fff;
+    font-size: 2.5em;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  .bgAbout {
+    h1 {
+      font-size: 1.7em;
+    }
+  }
+}
+
+/* About Us Repair are Our Passion */
+
+.imgContentSectionAbout {
+  background-color: #0000000b;
+  margin-top: 25px;
+  @include flexcontent();
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 35px;
+  .imgpart {
+    width: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: transform 0.9s ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .someContentAbout {
+    width: 60%;
+    padding: 0 20px; /* Adjust padding to maintain spacing */
+    margin: 0 auto; /* Center the content */
+    strong {
+      font-size: 1.8em;
+    }
+    p {
+      color: rgb(48, 48, 48);
+      font-size: 1.2em;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .pointsPart {
+      margin: 15px 0px;
+
+      justify-content: space-between;
+      .points {
+        @include flexcontent();
+        flex-direction: column;
+        gap: 15px;
+        align-items: normal;
+        i {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 937px) {
+  .imgContentSectionAbout {
+    flex-direction: column;
+    .imgpart {
+      width: 100%;
+    }
+    .someContentAbout {
+      width: 100%;
+      padding: 0 1px;
+    }
+  }
+}

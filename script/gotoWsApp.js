@@ -8,10 +8,10 @@ let laptop = "Laptop";
 
 function gotoWsForLaptopRepair1() {
   let productIssue =
-    "Laptop Fabrication - Structural repairs for physical damage to the laptop body.";
+    "Clean-up and Optimization: Enhancing system performance by removing unnecessary files, fixing registry errors, and optimizing settings.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -22,10 +22,10 @@ function gotoWsForLaptopRepair1() {
 
 function gotoWsForLaptopRepair2() {
   let productIssue =
-    "Keyboard Repair - Fixing or replacing unresponsive, damaged, or broken keys.";
+    "Computer Cleaning: Physical cleaning of internal and external components to ensure proper functioning and prevent overheating.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -36,10 +36,10 @@ function gotoWsForLaptopRepair2() {
 
 function gotoWsForLaptopRepair3() {
   let productIssue =
-    "Charging Port Repair - Fixing loose or damaged charging ports.";
+    "Computer Customization: Tailoring hardware and software configurations to meet specific needs.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -50,10 +50,10 @@ function gotoWsForLaptopRepair3() {
 
 function gotoWsForLaptopRepair4() {
   let productIssue =
-    "Battery Replacement - Repair or replacement of faulty or degraded batteries.";
+    "Computer Upgrades: Improving system performance by upgrading hardware components like RAM, storage, or graphics cards.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -63,10 +63,11 @@ function gotoWsForLaptopRepair4() {
 }
 
 function gotoWsForLaptopRepair5() {
-  let productIssue = "Hinge Repair - Repairing broken or loose laptop hinges.";
+  let productIssue =
+    "Data backup & recovery: Specialized service for restoring data from damaged or corrupted storage devices.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -77,10 +78,10 @@ function gotoWsForLaptopRepair5() {
 
 function gotoWsForLaptopRepair6() {
   let productIssue =
-    "Speaker Repair - Fixing distorted or non-functional speakers.";
+    "Hardware & Software Installation: Installing or upgrading components and software applications";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -91,10 +92,10 @@ function gotoWsForLaptopRepair6() {
 
 function gotoWsForLaptopRepair7() {
   let productIssue =
-    "Cooling Fan Repair - Repairing noisy or malfunctioning fans to prevent overheating.";
+    "Mac: Repair and maintenance services tailored for Apple Mac devices.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -104,11 +105,10 @@ function gotoWsForLaptopRepair7() {
 }
 
 function gotoWsForLaptopRepair8() {
-  let productIssue = `Adapter and Power Supply Repair - Fixing broken laptop adapters. Replacing or repairing adapter
-            cables.`;
+  let productIssue = `Network & Printer Setup: Configuring networks and setting up printers for seamless connectivity.`;
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -119,10 +119,10 @@ function gotoWsForLaptopRepair8() {
 
 function gotoWsForLaptopRepair9() {
   let productIssue =
-    "Trackpad Repair - Fixing unresponsive or malfunctioning touchpads.";
+    "New Computer Setup: Initial setup of a new computer, including software installation and system configuration.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -133,10 +133,10 @@ function gotoWsForLaptopRepair9() {
 
 function gotoWsForLaptopRepair10() {
   let productIssue =
-    "Screen Replacement - Repair or replacement of cracked, damaged, or flickering screens.";
+    "Operating System & Software: Installation, repair, or upgrade of operating systems and software applications.";
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +
@@ -146,11 +146,62 @@ function gotoWsForLaptopRepair10() {
 }
 
 function gotoWsForLaptopRepair11() {
-  let productIssue = `Motherboard Repair - Resolving issues with the motherboard, such as damaged circuits or
-            faulty components.`;
+  let productIssue = `Problem Diagnosis: Identifying and troubleshooting issues in computers or laptops.`;
 
   let url =
-    "https://wa.me/919892042097?text=" +
+    "https://wa.me/919152527077?text=" +
+    CustomerMessage +
+    "%0a" +
+    issue +
+    productIssue;
+
+  window.open(url, "_blank").focus();
+}
+
+function gotoWsForLaptopRepair12() {
+  let productIssue = `Repair and Maintenance: General repair services and routine maintenance to keep systems running smoothly.`;
+
+  let url =
+    "https://wa.me/919152527077?text=" +
+    CustomerMessage +
+    "%0a" +
+    issue +
+    productIssue;
+
+  window.open(url, "_blank").focus();
+}
+
+function gotoWsForLaptopRepair13() {
+  let productIssue = `Screen Replacement: Replacing damaged or broken laptop or monitor screens.`;
+
+  let url =
+    "https://wa.me/919152527077?text=" +
+    CustomerMessage +
+    "%0a" +
+    issue +
+    productIssue;
+
+  window.open(url, "_blank").focus();
+}
+
+function gotoWsForLaptopRepair14() {
+  let productIssue = `Virus and Malware Removal: Detecting and removing malicious software to protect your system and data.`;
+
+  let url =
+    "https://wa.me/919152527077?text=" +
+    CustomerMessage +
+    "%0a" +
+    issue +
+    productIssue;
+
+  window.open(url, "_blank").focus();
+}
+
+function gotoWsForLaptopRepair14() {
+  let productIssue = `Windows PC: Specialized repair and maintenance services for Windows-based computers.`;
+
+  let url =
+    "https://wa.me/919152527077?text=" +
     CustomerMessage +
     "%0a" +
     issue +

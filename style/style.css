@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+.hideSomeContent {
+  display: none;
+}
+
 .mainSectionNavabar .emailPhoneIconTiming {
   display: flex;
   justify-content: center;
@@ -358,13 +362,12 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 1.1em;
   padding: 15px;
   color: #fff;
   text-align: center;
 }
 .bgMainSection .bgImgSection strong {
-  font-size: 1.8em;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
@@ -378,7 +381,7 @@ a {
   border: 1px solid #fff;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #fff;
   padding: 2px 8px;
 }
@@ -388,10 +391,11 @@ a {
 .bgMainSection .bgImgSection .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateY(100%);
+  transform: translateY(-100%);
   transition: 0.5s ease-in-out;
 }
 .bgMainSection .bgImgSection .bgFirstLetter {
+  text-transform: uppercase;
   transition-delay: 100ms;
 }
 .bgMainSection .bgImgSection .bgSecondLetter {
@@ -419,22 +423,22 @@ a {
   .bgMainSection .slider .buttons button {
     width: 35px;
     height: 35px;
-    font-size: 1.1em;
+    font-size: 1rem;
     background: none;
-  }
-}
-@media screen and (max-width: 496px) {
-  .bgMainSection .bgImgSection strong {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  .bgMainSection .bgImgSection p {
-    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 768px) {
   .bgMainSection .slider {
     height: 300px;
+  }
+}
+@media screen and (max-width: 496px) {
+  .bgMainSection .bgImgSection strong {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .bgMainSection .bgImgSection p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 260px) {
@@ -863,9 +867,10 @@ a {
   align-items: center;
   margin-bottom: 15px;
 }
-.reviewSection .reviewHere .testimonial-card .user-info img {
-  width: 50px;
-  height: 50px;
+.reviewSection .reviewHere .testimonial-card .user-info .userProfileName {
+  background: green;
+  color: #fff;
+  padding: 10px 13px;
   border-radius: 50%;
   margin-right: 15px;
 }
@@ -886,6 +891,7 @@ a {
   color: #555;
   font-size: 14px;
   line-height: 1.5;
+  text-align: justify;
 }
 .reviewSection .reviewHere .btns {
   position: absolute;
@@ -931,6 +937,11 @@ a {
     width: 100%;
   }
   .reviewSection .reviewHere {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 10px;
+    justify-content: center;
     width: 100%;
   }
 }
@@ -955,9 +966,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
   padding: 25px 15px;
-  gap: 25px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 .footerSection strong {
@@ -1014,7 +1026,24 @@ a {
   gap: 15px;
   flex-direction: column;
 }
+.footerSection .quickContacts .TCCaddresses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: normal;
+  gap: 5px;
+}
 
+@media screen and (max-width: 600px) {
+  .footerSection .quickContacts .TCCaddresses {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 277px) {
+  .footerSection .quickContacts .footerEmail {
+    font-size: 0.7rem;
+  }
+}
 .copyrightLine {
   display: flex;
   justify-content: center;
@@ -1085,15 +1114,33 @@ a {
   background-color: rgb(46, 217, 46);
   color: #fff;
   padding: 8px;
-  display: none;
 }
 .bottomCallUs i {
   font-size: 1.3em;
+  transition: transform 0.2s ease;
+  animation: tilt-shake 1s infinite;
+}
+@keyframes tilt-shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(13deg);
+  }
+  80% {
+    transform: rotate(-13deg);
+  }
 }
 
 .gotoTop {
   position: fixed;
-  bottom: 63px;
+  bottom: 108px;
   right: 10px;
   background-color: #309724;
   color: #fff;
@@ -1105,14 +1152,6 @@ a {
   font-size: 1.7em;
 }
 
-@media screen and (max-width: 907px) {
-  .bottomCallUs {
-    display: block;
-  }
-  .gotoTop {
-    bottom: 108px;
-  }
-}
 .authorName {
   font-size: 0.8rem;
 }

@@ -53,6 +53,7 @@ $hoverPrimaryColor: #6ce05f;
 @mixin gridcontentForCentre($size, $gap) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+  justify-content: center;
   gap: $gap;
   justify-content: center;
 }
@@ -66,6 +67,10 @@ $hoverPrimaryColor: #6ce05f;
 a {
   color: #000;
   text-decoration: none;
+}
+
+.hideSomeContent {
+  display: none;
 }
 
 .mainSectionNavabar {
@@ -403,12 +408,11 @@ a {
     height: 100%;
     @include flexcontent();
     flex-direction: column;
-    font-size: 1.1em;
     padding: 15px;
     color: #fff;
     text-align: center;
     strong {
-      font-size: 1.8em;
+      font-size: 1.5rem;
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
     }
@@ -422,7 +426,7 @@ a {
       border: 1px solid #fff;
       cursor: pointer;
       font-family: "Montserrat", sans-serif;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       color: #fff;
       padding: 2px 8px;
       &:hover {
@@ -432,11 +436,12 @@ a {
     .hidden {
       opacity: 0;
       filter: blur(5px);
-      transform: translateY(100%);
+      transform: translateY(-100%);
       transition: 0.5s ease-in-out;
     }
 
     .bgFirstLetter {
+      text-transform: uppercase;
       transition-delay: 100ms;
     }
     .bgSecondLetter {
@@ -468,23 +473,9 @@ a {
         button {
           width: 35px;
           height: 35px;
-          font-size: 1.1em;
+          font-size: 1rem;
           background: none;
         }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 496px) {
-  .bgMainSection {
-    .bgImgSection {
-      strong {
-        font-size: 1.2em;
-        text-align: center;
-      }
-      p {
-        font-size: 0.8em;
       }
     }
   }
@@ -494,6 +485,20 @@ a {
   .bgMainSection {
     .slider {
       height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 496px) {
+  .bgMainSection {
+    .bgImgSection {
+      strong {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -541,10 +546,7 @@ a {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-radius: 10px;
       padding: 5px;
-      .imgBox {
-        img {
-        }
-      }
+
       .wordBox {
         text-transform: uppercase;
         font-weight: 600;
@@ -916,11 +918,7 @@ a {
   }
   .reviewHere {
     padding: 15px 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    justify-content: center;
-    gap: 10px;
-    justify-content: center;
+    @include gridcontentForCentre(500px, 10px);
     .testimonial-card {
       background-color: #fff;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
@@ -931,9 +929,10 @@ a {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-        img {
-          width: 50px;
-          height: 50px;
+        .userProfileName {
+          background: green;
+          color: #fff;
+          padding: 10px 13px;
           border-radius: 50%;
           margin-right: 15px;
         }
@@ -955,6 +954,7 @@ a {
         color: #555;
         font-size: 14px;
         line-height: 1.5;
+        text-align: justify;
       }
     }
 
@@ -1003,6 +1003,7 @@ a {
     min-height: 85vh;
     width: 100%;
     .reviewHere {
+      @include gridcontentForCentre(250px, 10px);
       width: 100%;
     }
   }
@@ -1028,9 +1029,10 @@ a {
   background: $primaryColor;
   color: #fff;
   @include flexcontent();
+  flex-direction: row-reverse;
   justify-content: space-evenly;
   padding: 25px 15px;
-  gap: 25px;
+  gap: 15px;
   flex-wrap: wrap;
   strong {
     text-decoration: underline;
@@ -1089,6 +1091,31 @@ a {
     align-items: normal;
     gap: 15px;
     flex-direction: column;
+    .TCCaddresses {
+      @include flexcontent();
+      align-items: normal;
+      gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footerSection {
+    .quickContacts {
+      .TCCaddresses {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 277px) {
+  .footerSection {
+    .quickContacts {
+      .footerEmail {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 
@@ -1164,15 +1191,35 @@ a {
   background-color: rgb(46, 217, 46);
   color: #fff;
   padding: 8px;
-  display: none;
+
   i {
     font-size: 1.3em;
+    transition: transform 0.2s ease;
+    animation: tilt-shake 1s infinite;
+  }
+  @keyframes tilt-shake {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(15deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(13deg);
+    }
+    80% {
+      transform: rotate(-13deg);
+    }
   }
 }
 
 .gotoTop {
   position: fixed;
-  bottom: 63px;
+  bottom: 108px;
   right: 10px;
   background-color: $primaryColor;
   color: #fff;
@@ -1181,15 +1228,6 @@ a {
   border-radius: 5px;
   i {
     font-size: 1.7em;
-  }
-}
-
-@media screen and (max-width: 907px) {
-  .bottomCallUs {
-    display: block;
-  }
-  .gotoTop {
-    bottom: 108px;
   }
 }
 

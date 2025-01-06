@@ -183,6 +183,10 @@ a {
     }
   }
 }
+/* For Body */
+.hideScrollbar {
+  overflow: hidden;
+}
 
 @media screen and (max-width: 922px) {
   .mainSectionNavabar {
@@ -201,24 +205,32 @@ a {
     }
     .pureNavbar {
       position: relative;
+      .LogoNameImg {
+        z-index: 222;
+        border: 1px solid transparent;
+        transition: border 0.5s ease-in-out;
+      }
+      .borderforLogoNameImg {
+        border: 1px solid #000;
+      }
       .ulBar {
         align-items: normal;
         flex-direction: column;
         position: fixed;
-        width: 80%;
-        top: 0px;
-        left: -850px;
-        height: 100%;
-        background: #000000de;
+        width: 100%;
+        top: -500px;
+        left: 0px;
+        height: 0%;
+        background: #fff;
         overflow: hidden;
         z-index: 111;
-        transition: left 0.5s ease-in-out;
+        transition: top 0.5s ease-in-out, height 0.5s ease-in-out;
         li {
-          border-bottom: 1px solid #fff;
+          border-bottom: 1px solid;
 
           padding: 5px;
           a {
-            color: #fff;
+            color: #000;
             i {
               display: inline-block;
             }
@@ -236,7 +248,7 @@ a {
           text-align: center;
         }
         &.ulBarActive {
-          left: 0px;
+          top: 0px;
           height: 100%;
           border: 1px solid $primaryColor;
           border-left: none;
@@ -246,7 +258,7 @@ a {
       .menuToggle {
         display: block;
         position: absolute;
-        top: 13px;
+        top: 19px;
         right: 20px;
         margin-left: -90px;
         width: 30px;
@@ -256,6 +268,7 @@ a {
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
+        z-index: 22222;
         &::before {
           content: "";
           position: absolute;
@@ -1171,6 +1184,7 @@ a {
   box-shadow: 0px 0px 5px 1px #0000007f;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 1;
   user-select: none;
 }
 
@@ -1226,6 +1240,7 @@ a {
   padding: 5px 6px;
   box-shadow: 0px 0px 5px 1px #0000007f;
   border-radius: 5px;
+  z-index: 1;
   i {
     font-size: 1.7em;
   }

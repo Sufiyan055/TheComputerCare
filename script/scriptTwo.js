@@ -2,6 +2,7 @@ let ulBar = document.querySelector(".ulBar");
 let menuToggle = document.querySelector(".menuToggle");
 let gotoTop = document.querySelector(".gotoTop");
 let pureNavbar = document.querySelector(".pureNavbar");
+let LogoNameImg = document.querySelector(".LogoNameImg");
 
 const navMainBarDisplay = () => {
   if (window.scrollY >= 500) {
@@ -21,6 +22,8 @@ window.addEventListener("scroll", navMainBarDisplay);
 toggleNav = () => {
   ulBar.classList.toggle("ulBarActive");
   menuToggle.classList.toggle("active");
+  document.body.classList.toggle("hideScrollbar");
+  LogoNameImg.classList.toggle("borderforLogoNameImg");
 };
 
 function BacktoTop() {

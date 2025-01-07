@@ -608,168 +608,6 @@ a {
   }
 }
 
-/* Service Process */
-
-/* .serviceProcessSection {
-  @include linearGradient(url(../images/serviceProcess.jpg));
-  background-attachment: fixed;
-  height: 50vh;
-  color: #fff;
-  overflow: hidden;
-  .strongHead {
-    font-size: 1.4em;
-  }
-  .serviceLine {
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 1.2em;
-  }
-  .servicesSteps {
-    height: 100%;
-    @include flexcontent();
-    gap: 45px;
-    overflow: hidden;
-
-    span:nth-child(1) {
-      font-size: 2.8em;
-      font-weight: bolder;
-      box-shadow: 0px 0px 3px 1px #ffffff5e;
-      padding: 5px 20px;
-      border-radius: 50%;
-    }
-    span:nth-child(2) {
-      font-size: 1.1em;
-    }
-    .steps {
-      @include flexcontent();
-      gap: 20px;
-      .stepOne {
-        padding: 5px 23px;
-      }
-      .fa-arrow-down {
-        display: none;
-      }
-    }
-    i {
-      font-size: 2.3em;
-    }
-    .secondIcon {
-      color: $primaryColor;
-    }
-    .step3 {
-      span {
-        &:nth-child(1) {
-          background-color: $primaryColor;
-          color: #000;
-        }
-      }
-    }
-  }
-  .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: 0.5s ease-in-out;
-  }
-  .steps {
-    &:nth-child(1) {
-      transition-delay: 100ms;
-    }
-    &:nth-child(2) {
-      transition-delay: 400ms;
-    }
-    &:nth-child(3) {
-      transition-delay: 700ms;
-    }
-    &:nth-child(4) {
-      transition-delay: 1000ms;
-    }
-  }
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-}
-
-@media screen and (max-width: 895px) {
-  .serviceProcessSection {
-    height: 75vh;
-    .hidden {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateY(-100%);
-      transition: 0.5s ease-in-out;
-    }
-    .show {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-    }
-    .servicesSteps {
-      align-items: flex-start;
-      flex-direction: column;
-      margin-left: 199px;
-      height: 85%;
-      span:nth-child(1) {
-        font-size: 2em;
-        padding: 5px 15px;
-      }
-      span:nth-child(2) {
-        font-size: 1em;
-      }
-      .steps {
-        position: relative;
-        .stepOne {
-          padding: 5px 18px;
-        }
-        .fa-arrow-right {
-          display: none;
-        }
-        .fa-arrow-down {
-          display: block;
-          position: absolute;
-          font-size: 1.5em;
-          top: 58px;
-          left: 15px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 597px) {
-  .serviceProcessSection {
-    .strongHead {
-      font-size: 1.2em;
-    }
-    .serviceLine {
-      font-size: 0.9em;
-    }
-    .servicesSteps {
-      margin-left: 85px;
-    }
-  }
-}
-
-@media screen and (max-width: 371px) {
-  .serviceProcessSection {
-    height: 80vh;
-    .servicesSteps {
-      margin-left: 15px;
-    }
-  }
-}
-
-@media screen and (max-width: 299px) {
-  .serviceProcessSection {
-    height: 90vh;
-    .servicesSteps {
-      margin-left: 15px;
-    }
-  }
-} */
-
 /* Services we Offer */
 
 .servicesSection {
@@ -924,7 +762,7 @@ a {
   flex-direction: column;
   padding: 5rem 2.5rem;
   strong {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     border-bottom: 1px solid #000;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -1015,9 +853,14 @@ a {
     flex-direction: column;
     min-height: 85vh;
     width: 100%;
+    padding: 5rem 1rem;
+    .headCustomerSories {
+      font-size: 1rem;
+    }
     .reviewHere {
       @include gridcontentForCentre(250px, 10px);
       width: 100%;
+      padding: 15px 5px;
     }
   }
 }
@@ -1025,12 +868,23 @@ a {
   .reviewSection {
     flex-direction: column;
     .reviewHere {
-      width: 100%;
-      .btns {
-        top: 20px;
-      }
-      strong {
-        font-size: 1.2em;
+      @include gridcontentForCentre(200px, 10px);
+      .testimonial-card {
+        .user-info {
+          .userProfileName {
+            padding: 2px 5px;
+            margin-right: 2px;
+          }
+          .name {
+            font-size: 0.6rem;
+          }
+          .stars {
+            font-size: 0.8rem;
+          }
+        }
+        .testimonial-content {
+          font-size: 0.7rem;
+        }
       }
     }
   }

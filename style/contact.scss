@@ -61,6 +61,18 @@ $hoverPrimaryColor: #6ce05f;
         font-size: 1.2em;
       }
     }
+    .iconAddresBox {
+      align-items: normal;
+      address {
+        border-bottom: 1px solid #000;
+        .shopBranch {
+          background: $hoverPrimaryColor;
+          padding: 0.1rem;
+          border-radius: 2px;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
@@ -74,7 +86,12 @@ $hoverPrimaryColor: #6ce05f;
   background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
-
+  .visit-office {
+    .map-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
   .visit-office,
   .leave-message {
     width: 45%;

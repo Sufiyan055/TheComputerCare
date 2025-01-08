@@ -52,6 +52,18 @@
   font-weight: bold;
   font-size: 1.2em;
 }
+.iconsContacts .iconBoxMain .iconAddresBox {
+  align-items: normal;
+}
+.iconsContacts .iconBoxMain .iconAddresBox address {
+  border-bottom: 1px solid #000;
+}
+.iconsContacts .iconBoxMain .iconAddresBox address .shopBranch {
+  background: #6ce05f;
+  padding: 0.1rem;
+  border-radius: 2px;
+  color: #fff;
+}
 
 /* Contact Section */
 .contact-section {
@@ -62,6 +74,10 @@
   background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
+}
+.contact-section .visit-office .map-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .contact-section .visit-office,
 .contact-section .leave-message {

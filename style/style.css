@@ -171,7 +171,7 @@ a {
     position: relative;
   }
   .mainSectionNavabar .pureNavbar .LogoNameImg {
-    z-index: 222;
+    z-index: 222222;
     border: 1px solid transparent;
     transition: border 0.5s ease-in-out;
   }
@@ -188,7 +188,7 @@ a {
     height: 0%;
     background: #fff;
     overflow: hidden;
-    z-index: 111;
+    z-index: 11111;
     transition: top 0.5s ease-in-out, height 0.5s ease-in-out;
   }
   .mainSectionNavabar .pureNavbar .ulBar li {
@@ -217,7 +217,7 @@ a {
     height: 100%;
     border: 1px solid #309724;
     border-left: none;
-    z-index: 111;
+    z-index: 111111;
   }
   .mainSectionNavabar .pureNavbar .menuToggle {
     display: block;
@@ -232,7 +232,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    z-index: 22222;
+    z-index: 222222;
   }
   .mainSectionNavabar .pureNavbar .menuToggle::before {
     content: "";
@@ -283,6 +283,7 @@ a {
   margin: auto;
   position: relative;
   overflow: hidden;
+  /* Hide Btn When Cross Click */
 }
 .bgMainSection .slider .bgShade {
   position: absolute;
@@ -310,16 +311,10 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.bgMainSection .slider .buttons {
+.bgMainSection .slider .Btn {
   position: absolute;
   top: 45%;
-  left: 5%;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 11;
-}
-.bgMainSection .slider .buttons button {
+  z-index: 111;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -329,14 +324,20 @@ a {
   font-weight: bold;
   border: none;
   font-size: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
-.bgMainSection .slider .buttons button:hover {
+.bgMainSection .slider .Btn:hover {
   opacity: 0.8;
+}
+.bgMainSection .slider .prevBtn {
+  left: 5%;
+}
+.bgMainSection .slider .nextBtn {
+  right: 5%;
+}
+.bgMainSection .slider .hideOnNavVisi {
+  display: none;
 }
 .bgMainSection .slider .dots {
   position: absolute;
@@ -364,7 +365,7 @@ a {
   width: 30px;
 }
 .bgMainSection .bgImgSection {
-  z-index: 1;
+  z-index: 11;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -384,6 +385,17 @@ a {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+}
+.bgMainSection .bgImgSection .bgSecondLetter {
+  font-weight: 800;
+}
+.bgMainSection .bgImgSection .phoneNumber {
+  color: #fff;
+  cursor: pointer;
+  display: inline;
+  margin: 5px 1px;
+  font-weight: 500;
+  z-index: 11;
 }
 .bgMainSection .bgImgSection .btnWithWords {
   margin-top: 15px;
@@ -414,6 +426,8 @@ a {
 }
 .bgMainSection .bgImgSection .bgSecondLetter {
   transition-delay: 400ms;
+  border-bottom: 3px solid #309724;
+  font-size: 1.5rem;
 }
 .bgMainSection .bgImgSection .bgthirdLetter {
   transition-delay: 700ms;
@@ -427,44 +441,53 @@ a {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 1131px) {
-  .bgMainSection .slider .buttons {
-    width: 90px;
-    top: 93%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .bgMainSection .slider .buttons button {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-    background: none;
-  }
-}
 @media screen and (max-width: 768px) {
   .bgMainSection .slider {
     height: 300px;
   }
-}
-@media screen and (max-width: 496px) {
-  .bgMainSection .bgImgSection strong {
+  .bgMainSection .bgImgSection .bgSecondLetter {
     font-size: 1.2rem;
-    text-align: center;
   }
-  .bgMainSection .bgImgSection p {
+  .bgMainSection .bgImgSection .bgthirdLetter a {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 260px) {
+@media screen and (max-width: 496px) {
+  .bgMainSection .slider .Btn {
+    top: 85%;
+    font-size: 1rem;
+  }
+  .bgMainSection .slider .prevBtn {
+    left: 103px;
+  }
+  .bgMainSection .slider .nextBtn {
+    right: 105px;
+  }
+  .bgMainSection .bgImgSection strong {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .bgMainSection .bgImgSection p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 292px) {
+  .bgMainSection .slider .Btn {
+    top: 85%;
+    font-size: 1rem;
+  }
+  .bgMainSection .slider .prevBtn {
+    left: 75px;
+  }
+  .bgMainSection .slider .nextBtn {
+    right: 75px;
+  }
   .bgMainSection .bgImgSection .btnWithWords {
     height: 20px;
   }
   .bgMainSection .bgImgSection .btnWithWords strong {
     font-size: 0.7em;
     margin-top: 3px;
-  }
-  .bgMainSection .bgImgSection .btnWithWords .words span {
-    font-size: 0.7em;
   }
 }
 /* Why Choose Us Section */

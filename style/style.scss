@@ -206,7 +206,7 @@ a {
     .pureNavbar {
       position: relative;
       .LogoNameImg {
-        z-index: 222;
+        z-index: 222222;
         border: 1px solid transparent;
         transition: border 0.5s ease-in-out;
       }
@@ -223,7 +223,7 @@ a {
         height: 0%;
         background: #fff;
         overflow: hidden;
-        z-index: 111;
+        z-index: 11111;
         transition: top 0.5s ease-in-out, height 0.5s ease-in-out;
         li {
           border-bottom: 1px solid;
@@ -252,7 +252,7 @@ a {
           height: 100%;
           border: 1px solid $primaryColor;
           border-left: none;
-          z-index: 111;
+          z-index: 111111;
         }
       }
       .menuToggle {
@@ -268,7 +268,7 @@ a {
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
-        z-index: 22222;
+        z-index: 222222;
         &::before {
           content: "";
           position: absolute;
@@ -356,32 +356,34 @@ a {
         object-fit: cover;
       }
     }
-    .buttons {
+    .Btn {
       position: absolute;
       top: 45%;
-      left: 5%;
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      z-index: 11;
-
-      button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #fff5;
-        color: #fff;
-        font-family: monospace;
-        font-weight: bold;
-        border: none;
-        font-size: 1.2em;
-        @include flexcontent();
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-        &:hover {
-          opacity: 0.8;
-        }
+      z-index: 111;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff5;
+      color: #fff;
+      font-family: monospace;
+      font-weight: bold;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 0.8;
       }
+    }
+    .prevBtn {
+      left: 5%;
+    }
+    .nextBtn {
+      right: 5%;
+    }
+    /* Hide Btn When Cross Click */
+    .hideOnNavVisi {
+      display: none;
     }
     .dots {
       position: absolute;
@@ -411,7 +413,7 @@ a {
   }
 
   .bgImgSection {
-    z-index: 1;
+    z-index: 11;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -428,6 +430,17 @@ a {
       font-size: 1.5rem;
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
+    }
+    .bgSecondLetter {
+      font-weight: 800;
+    }
+    .phoneNumber {
+      color: #fff;
+      cursor: pointer;
+      display: inline;
+      margin: 5px 1px;
+      font-weight: 500;
+      z-index: 11;
     }
     .btnWithWords {
       margin-top: 15px;
@@ -459,6 +472,8 @@ a {
     }
     .bgSecondLetter {
       transition-delay: 400ms;
+      border-bottom: 3px solid $primaryColor;
+      font-size: 1.5rem;
     }
     .bgthirdLetter {
       transition-delay: 700ms;
@@ -476,22 +491,6 @@ a {
 }
 
 @media screen and (max-width: 1131px) {
-  .bgMainSection {
-    .slider {
-      .buttons {
-        width: 90px;
-        top: 93%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        button {
-          width: 35px;
-          height: 35px;
-          font-size: 1rem;
-          background: none;
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -499,36 +498,65 @@ a {
     .slider {
       height: 300px;
     }
-  }
-}
-
-@media screen and (max-width: 496px) {
-  .bgMainSection {
     .bgImgSection {
-      strong {
+      .bgSecondLetter {
         font-size: 1.2rem;
-        text-align: center;
       }
-      p {
-        font-size: 1rem;
+      .bgthirdLetter {
+        a {
+          font-size: 1rem;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 260px) {
+@media screen and (max-width: 496px) {
   .bgMainSection {
+    .slider {
+      .Btn {
+        top: 85%;
+        font-size: 1rem;
+      }
+      .prevBtn {
+        left: 103px;
+      }
+      .nextBtn {
+        right: 105px;
+      }
+    }
+    .bgImgSection {
+      strong {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 292px) {
+  .bgMainSection {
+    .slider {
+      .Btn {
+        top: 85%;
+        font-size: 1rem;
+      }
+      .prevBtn {
+        left: 75px;
+      }
+      .nextBtn {
+        right: 75px;
+      }
+    }
     .bgImgSection {
       .btnWithWords {
         height: 20px;
         strong {
           font-size: 0.7em;
           margin-top: 3px;
-        }
-        .words {
-          span {
-            font-size: 0.7em;
-          }
         }
       }
     }

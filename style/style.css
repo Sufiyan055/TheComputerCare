@@ -88,7 +88,7 @@ a {
   justify-content: space-between;
   padding: 5px 30px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3137254902);
-  z-index: 111;
+  z-index: 1111;
 }
 .mainSectionNavabar .pureNavbar .LogoNameImg {
   padding: 5px 15px;
@@ -195,9 +195,6 @@ a {
     border-bottom: 1px solid;
     padding: 5px;
   }
-  .mainSectionNavabar .pureNavbar .ulBar li a {
-    color: #000;
-  }
   .mainSectionNavabar .pureNavbar .ulBar li a i {
     display: inline-block;
   }
@@ -283,7 +280,6 @@ a {
   margin: auto;
   position: relative;
   overflow: hidden;
-  /* Hide Btn When Cross Click */
 }
 .bgMainSection .slider .bgShade {
   position: absolute;
@@ -335,9 +331,6 @@ a {
 }
 .bgMainSection .slider .nextBtn {
   right: 5%;
-}
-.bgMainSection .slider .hideOnNavVisi {
-  display: none;
 }
 .bgMainSection .slider .dots {
   position: absolute;
@@ -985,7 +978,7 @@ a {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4980392157);
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1;
+  z-index: 11;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -1041,7 +1034,8 @@ a {
   padding: 5px 6px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4980392157);
   border-radius: 5px;
-  z-index: 1;
+  z-index: 11;
+  cursor: pointer;
 }
 .gotoTop i {
   font-size: 1.7em;

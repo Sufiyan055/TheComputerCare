@@ -120,7 +120,7 @@ a {
     justify-content: space-between;
     padding: 5px 30px;
     box-shadow: 0px 0px 5px 2px #00000050;
-    z-index: 111;
+    z-index: 1111;
 
     .LogoNameImg {
       padding: 5px 15px;
@@ -230,7 +230,6 @@ a {
 
           padding: 5px;
           a {
-            color: #000;
             i {
               display: inline-block;
             }
@@ -381,10 +380,7 @@ a {
     .nextBtn {
       right: 5%;
     }
-    /* Hide Btn When Cross Click */
-    .hideOnNavVisi {
-      display: none;
-    }
+
     .dots {
       position: absolute;
       bottom: 10px;
@@ -1066,7 +1062,7 @@ a {
   box-shadow: 0px 0px 5px 1px #0000007f;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1;
+  z-index: 11;
   user-select: none;
 }
 
@@ -1122,7 +1118,8 @@ a {
   padding: 5px 6px;
   box-shadow: 0px 0px 5px 1px #0000007f;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 11;
+  cursor: pointer;
   i {
     font-size: 1.7em;
   }

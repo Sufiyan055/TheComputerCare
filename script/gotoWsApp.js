@@ -124,7 +124,7 @@ function gotoWsForLaptopRepair9() {
 }
 
 function gotoWsForLaptopRepair10() {
-  let productIssue = "All type of Printer Repairing ";
+  let productIssue = "Printer Repairing ";
 
   let url =
     "https://wa.me/919152527077?text=" +

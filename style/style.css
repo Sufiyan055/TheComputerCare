@@ -240,7 +240,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    z-index: 222222;
+    z-index: 22222222222;
   }
   .mainSectionNavabar .pureNavbar .menuToggle::before {
     content: "";
@@ -470,14 +470,7 @@ a {
 }
 @media screen and (max-width: 496px) {
   .bgMainSection .slider .Btn {
-    top: 85%;
     font-size: 1rem;
-  }
-  .bgMainSection .slider .prevBtn {
-    left: 103px;
-  }
-  .bgMainSection .slider .nextBtn {
-    right: 105px;
   }
   .bgMainSection .bgImgSection strong {
     font-size: 0.9rem;
@@ -489,14 +482,7 @@ a {
 }
 @media screen and (max-width: 292px) {
   .bgMainSection .slider .Btn {
-    top: 85%;
     font-size: 1rem;
-  }
-  .bgMainSection .slider .prevBtn {
-    left: 75px;
-  }
-  .bgMainSection .slider .nextBtn {
-    right: 75px;
   }
   .bgMainSection .bgImgSection .btnWithWords {
     height: 20px;

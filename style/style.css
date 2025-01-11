@@ -492,6 +492,22 @@ a {
     margin-top: 3px;
   }
 }
+.tagline {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  padding: 2px;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 500px) {
+  .tagline {
+    font-size: 1.2rem;
+  }
+}
 /* Why Choose Us Section */
 .chooseUsSection {
   margin: 60px 0px;

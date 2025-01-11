@@ -41,7 +41,7 @@
   gap: 5px;
 }
 .iconsContacts .iconBoxMain .iconBox i {
-  background-color: #309724;
+  background-color: #309624;
   color: #fff;
   font-size: 1.8em;
   padding: 16px 19px;
@@ -86,8 +86,8 @@
 .contact-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #309724;
-  border-bottom: 3px solid #309724;
+  color: #309624;
+  border-bottom: 3px solid #309624;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -111,14 +111,14 @@
 .contact-section form label {
   margin-bottom: 8px;
   font-weight: bold;
-  color: #309724;
+  color: #309624;
 }
 .contact-section form input,
 .contact-section form textarea,
 .contact-section form select {
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #309724;
+  border: 1px solid #309624;
   border-radius: 5px;
   font-size: 1rem;
 }
@@ -153,7 +153,7 @@
   width: 50%;
 }
 .contact-section form .emailWhatsappBtn button {
-  background-color: #309724;
+  background-color: #309624;
 }
 .contact-section form .emailWhatsappBtn button:hover {
   background-color: #6ce05f;

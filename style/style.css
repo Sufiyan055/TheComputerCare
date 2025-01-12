@@ -394,6 +394,39 @@ a {
   padding: 15px;
   color: #fff;
   text-align: center;
+  /* strong {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+  .bgSecondLetter {
+    font-weight: 800;
+  }
+  .phoneNumber {
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    margin: 5px 1px;
+    font-weight: 500;
+    z-index: 11;
+  }
+  .btnWithWords {
+    margin-top: 15px;
+    box-sizing: content-box;
+    background: transparent;
+    height: 30px;
+    padding: 2px 8px;
+    display: flex;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 2px 8px;
+    &:hover {
+      background: $primaryColor;
+    }
+  } */
   /* .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -422,39 +455,6 @@ a {
     filter: blur(0);
     transform: translateY(0);
   } */
-}
-.bgMainSection .bgImgSection strong {
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-}
-.bgMainSection .bgImgSection .bgSecondLetter {
-  font-weight: 800;
-}
-.bgMainSection .bgImgSection .phoneNumber {
-  color: #fff;
-  cursor: pointer;
-  display: inline;
-  margin: 5px 1px;
-  font-weight: 500;
-  z-index: 11;
-}
-.bgMainSection .bgImgSection .btnWithWords {
-  margin-top: 15px;
-  box-sizing: content-box;
-  background: transparent;
-  height: 30px;
-  padding: 2px 8px;
-  display: flex;
-  border: 1px solid #fff;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
-  padding: 2px 8px;
-}
-.bgMainSection .bgImgSection .btnWithWords:hover {
-  background: #309624;
 }
 
 @media screen and (max-width: 768px) {
@@ -492,7 +492,8 @@ a {
     margin-top: 3px;
   }
 }
-.tagline {
+.tagline,
+.hideTaglineForBigScreen {
   margin-top: 0.9rem;
   display: flex;
   justify-content: center;
@@ -504,15 +505,33 @@ a {
   text-transform: capitalize;
   font-family: "poppins", sans-serif;
 }
-.tagline b {
+.tagline b,
+.hideTaglineForBigScreen b {
   color: #309624;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-@media screen and (max-width: 500px) {
+.hideTaglineForBigScreen {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
   .tagline {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 632px) {
+  .tagline {
+    display: none;
+  }
+  .hideTaglineForBigScreen {
+    display: block;
+    font-size: 1rem;
+  }
+  .hideTaglineForBigScreen b {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }
 /* Why Choose Us Section */

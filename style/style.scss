@@ -457,7 +457,7 @@ a {
     padding: 15px;
     color: #fff;
     text-align: center;
-    strong {
+    /* strong {
       font-size: 1.5rem;
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
@@ -489,7 +489,7 @@ a {
       &:hover {
         background: $primaryColor;
       }
-    }
+    } */
     /* .hidden {
       opacity: 0;
       filter: blur(5px);
@@ -577,7 +577,8 @@ a {
   }
 }
 
-.tagline {
+.tagline,
+.hideTaglineForBigScreen {
   margin-top: 0.9rem;
   @include flexcontent();
   font-weight: 600;
@@ -593,9 +594,27 @@ a {
   }
 }
 
-@media screen and (max-width: 500px) {
+.hideTaglineForBigScreen {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
   .tagline {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 632px) {
+  .tagline {
+    display: none;
+  }
+  .hideTaglineForBigScreen {
+    display: block;
+    font-size: 1rem;
+    b {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
   }
 }
 /* Why Choose Us Section */
